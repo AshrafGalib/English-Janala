@@ -1,0 +1,57 @@
+nav {
+background-color: rgba(198, 189, 189, 1);  
+
+}  
+
+nav button{
+    border-color: rgba(66, 42, 213, 1);
+    background-color: rgba(198, 189, 189, 1) ;
+    color: rgba(66, 42, 213, 1);
+}
+nav button:hover{
+    background-color: rgba(66, 42, 213, 1) ;
+    color: white;
+}
+nav button:hover .navBtnimg {
+     filter: brightness(0) invert(1);
+}
+.blueClr{
+    color: rgba(0, 188, 255, 1);
+}
+p {
+    color:rgba(24, 24, 27, 0.59);
+}
+.GSStyle{
+    background-color: rgba(66, 42, 213, 1) ;
+    color: white;
+}
+.GSStyle:hover{
+    background-color:white;
+    color:  rgba(66, 42, 213, 1) ;
+    border-width: 1px ;
+    border-color:  rgba(66, 42, 213, 1)  ;
+}
+.btnClr{
+    border-color: rgba(66, 42, 213, 1);
+    color: rgba(66, 42, 213, 1);
+}
+.btnClr:hover{
+    background-color: rgba(66, 42, 213, 1) ;
+    color: white;
+}
+.btnClr:hover .navBtnimg{
+    filter: brightness(0) invert(1);
+    }
+#Lesson{
+    background-color: rgba(248, 248, 248, 1);
+    border-radius: 15px;
+}    
+.activeBtn {
+     background-color: rgba(66, 42, 213, 1) ;
+     color: white;
+}
+.invertImg{
+    filter: brightness(0) invert(1);
+}
+
+/*  ---*/

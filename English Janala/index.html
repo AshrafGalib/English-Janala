@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d4db7faf88.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <nav id="NAV" class="hidden w-full border-b relative accessSec">
+            <!-- logo section -->
+            <div class="flex justify-between w-11/12 mx-auto py-4">
+                <div class="flex items-center justify-center">
+                <h1 class="font-bold text-2xl">English</h1>
+                <img src="assets/logo.png" alt="">
+                <h1 class="font-bold text-2xl">জানালা</h1>
+            </div>
+            <!-- desktop menu -->
+            <div class="hidden md:flex gap-4 items-center justify-center">
+                <a href="#FAQ"><button class="font-bold btn btn-lg"><img src="assets/fa-circle-question.png" alt="" class="navBtnimg">Faq</button></a>
+                <a href="#LetsLearn"><button class="font-bold btn btn-lg"><img src="assets/fa-book-open.png" alt="" class="navBtnimg">Learn</button></a>
+                <button onclick="logOut()" class="font-bold btn btn-lg"><img src="assets/fa-arrow-right-from-bracket.png" alt="" class="navBtnimg">Logout</button>
+            </div>
+             <!-- Mobile Dropdown Button -->
+              <div class="md:hidden ">
+                <button id="MenuButton" class="btn">☰</button>
+              </div>
+            <div id="DropDownButtons" class="absolute hidden md:hidden gap-3 flex flex-col top-16 right-0 mr-3">
+               <a href="#FAQ"><button class="ddbtn font-bold btn btn-lg"><img src="assets/fa-circle-question.png" alt="" class="navBtnimg">Faq</button></a>
+                <a href="#LetsLearn"><button class="ddbtn font-bold btn btn-lg"><img src="assets/fa-book-open.png" alt="" class="navBtnimg">Learn</button></a>
+                <a href=""><button class="ddbtn font-bold btn btn-lg"><img src="assets/fa-arrow-right-from-bracket.png" alt="" class="navBtnimg">Logout</button></a>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- banner -->
+         <!-- desktop banner -->
+        <section id="DeskbannerSec" class="hidden md:flex w-11/12 mx-auto">
+              <div class="w-5/11 mx-auto grid items-center py-5">
+               <div class="grid gap-5">
+                <h1 class="font-bold text-5xl"><span class="blueClr">English </span>is Easy</h1>
+               <p class="font-bold">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+
+<!-- input field start -->
+               <!-- input field 1 -->
+               <label class="input validator">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </g>
+  </svg>
+  <input id="DESKusername"
+    type="text"
+    required
+    placeholder="Username"
+/>
+</label>
+
+<!-- Input field 2 -->
+<label class="input validator">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path
+        d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+      ></path>
+      <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+    </g>
+  </svg>
+  <input id="DESKpassword"
+    type="password"
+    required
+    placeholder="Password"
+    minlength="6"
+    />
+</label>
+<!-- input field end -->
+               <button id="DESKgetStartedButton" class="w-[200px] btn GSStyle">Get Started</button>
+               </div>
+              </div>
+<div class="w-5/11 mx-auto">
+<img src="assets/hero-student.png" alt="" srcset="">
+</div>
+        </section>
+
+        <!-- mobile banner -->
+         <section id="MblbannerSec" class="grid md:hidden w-11/12 mx-auto">
+          <div>
+            <img src="assets/hero-student.png" alt="" srcset="">
+          </div>
+          <div>
+             <div class="grid gap-5 mb-5">
+                <h1 class="font-bold text-5xl text-center "><span class="blueClr" id="english">English </span>is Easy</h1>
+               <p class="font-bold text-center">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+<div class="w-full grid gap-5 justify-center">
+    <!-- input field start -->
+               <!-- input field 1 -->
+               <label class="input validator">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </g>
+  </svg>
+  <input id="MBLusername" 
+    type="text"
+    required
+    placeholder="Username"
+  />
+</label>
+
+<!-- Input field 2 -->
+<label class="input validator">
+  <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path
+        d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+      ></path>
+      <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+    </g>
+  </svg>
+  <input id="MBLpassword"
+    type="password"
+    required
+    placeholder="Password"
+    minlength="6"
+/>
+</label>
+<!-- input field end -->
+               <a href="#NAV"><button id="MBLgetStartedButton" class="w-full btn GSStyle">Get Started</button></a>
+</div>
+
+               </div>
+              </div>
+          </div>
+         </section>
+<!-- Banner End -->
+
+ <!-- Let's Learn Vocabularies -->
+<section id="LetsLearn" class="hidden w-11/12 mx-auto grid gap-6 mt-20 accessSec">
+    <div class="text-center">
+        <h1 class="font-bold text-3xl">
+            <span class="blueClr">Let's</span> Learn Vocabularies
+        </h1>
+    </div>
+    <div id="levels" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 justify-center w-full gap-4">
+
+    </div>
+</section>
+<!-- Lesson Details -->
+<section id="Lesson" class="hidden p-4 gap-4 mt-6 w-11/12 mx-auto accessSec">
+ </section>
+
+ <!-- Accordion -->
+ <section id="FAQ" class="hidden w-11/12 mx-auto grid gap-6 mt-20 accessSec">
+    <div class="text-center">
+        <h1 class="font-bold text-3xl">
+            <span class="blueClr">Frequently</span> Asked Questions
+        </h1>
+    </div>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" checked="checked" />
+  <div class="collapse-title font-semibold">1. How can I start learning English on this website?</div>
+  <div class="collapse-content text-sm">You can start by exploring our beginner lessons, interactive exercises, and quizzes. We also offer structured courses to guide you step by step.</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">2. Is this website free to use?</div>
+  <div class="collapse-content text-sm">Yes, it’s free for now. You can learn vocabulary here without any cost.</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">3. Do I need to create an account?</div>
+  <div class="collapse-content text-sm">For now, no account is required. But we will be adding this feature soon!</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">4. How can I build my English vocabulary?</div>
+  <div class="collapse-content text-sm">You can build your vocabulary by learning a few new words every day, practicing them in sentences, and revising regularly. Reading books, listening to English conversations, and using flashcards or apps are also very effective. Here, you can practice vocabulary step by step and track your progress.</div>
+</div>
+<div class="collapse collapse-plus bg-base-100 border border-base-300">
+  <input type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">5. Do you offer certificates for completed courses?</div>
+  <div class="collapse-content text-sm">Not right now. But we are planning to launch a Grammar course, and then we will provide an e-certificate for completed courses.</div>
+</div>
+
+</main>
+<footer class="footer footer-horizontal footer-center border-t mt-20  p-10">
+  <aside>
+   <div class="flex items-center justify-center">
+                <h1 class="font-bold text-2xl">English</h1>
+                <img src="assets/logo.png" alt="">
+                <h1 class="font-bold text-2xl">জানালা</h1>
+            </div>
+    <p class="font-bold text-md">
+     ইংরেজি শিখুন সহজে
+    </p>
+    <p>Providing ED-Tech Applications since 2025</p>
+  </aside>
+    <div class="grid grid-flow-col gap-4">
+      <img src="assets/fb-thumb.png" alt="">
+      <img src="assets/youtube-thumb.png" alt="">
+      <img src="assets/instagram-thumb.png" alt="">
+      <img src="assets/github-thumb.png" alt="">
+    </div>
+ 
+</footer>
+
+<!-- modal -->
+ <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="modalDiv">
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    <script src="script.js"></script>
+</body>
+</html>
